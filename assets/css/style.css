@@ -1,0 +1,321 @@
+*{
+    font-family: "Rethink Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --color1: #000;
+    --color2: #fff;
+    --color3: #B5E742;
+    --color4: #EBFF66;
+    --color5: #686868;
+}
+                                                                        /* h1 animation  */
+.blinking-cursor {
+    user-select: none;
+    animation: blink 1s steps(2, start) infinite;
+    color: var(--color3);
+}
+#type-text{
+    color: var(--color3)!important;
+    position: absolute;
+    top: 0px;
+    background: transparent;
+    padding-left: 15px;
+}
+.animate-title{
+    position: relative;
+}
+@keyframes blink{
+   to{ visibility: hidden}
+}
+.navbar{
+    padding: 35px 0;
+    background-color: var(--color2);
+}
+.navigation ul{
+    margin-bottom: 0;
+    padding-left: 0!important;
+}
+.navigation ul li{
+    text-decoration: none;
+    list-style: none; 
+    padding-right: 50px;
+}
+.navigation ul li a{
+    text-decoration: none; 
+    color: var(--color1);
+    transition: all 0.3s ease-in-out;
+    font-size: 21px;
+    font-weight: 400;
+}
+.navigation ul li a:hover{
+    text-decoration: none; 
+    color: var(--color3);
+    transition: all 0.3s ease-in-out;
+}
+.call-btn button{
+    background: var(--color2);
+    border-radius: 42px;
+    border: 4px solid #b5e742;
+    padding: 20px 70px;
+    font-size: 21px;
+    font-weight: 400;
+    color: var(--color1);
+    position: relative;
+    overflow: hidden;
+}
+.call-btn button span{
+    color: var(--color1);
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    transition: 0.3s;
+}
+.call-btn button:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #b5e742;
+    transition: all .35s;
+  }
+  .call-btn button:hover span{
+    color: var(--color2);
+  }
+  .call-btn button:hover:after{
+    width: 100%;
+    z-index: 0;
+  }
+.header-section{
+    padding: 85px 0;
+    background-color: var(--color2);
+}
+.light-title{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 0!important;
+}
+.title{
+    font-size: 82px;
+    font-weight: 600;
+    color: var(--color1);
+}
+.basic-btn{
+    padding-top: 38px;
+}
+.basic-btn a{
+    text-decoration: none;
+    color: var(--color1);
+    font-size: 21px;
+    font-weight: 400;
+}
+.basic-btn a span{margin-left: 20px;}
+.img-slide{
+    height: 750px;
+    object-fit: cover;
+    overflow: hidden;
+}
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+}
+.content-section{
+    padding: 80px 0;
+    background-color: var(--color2);
+}
+.content-section-info{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #ee7752, #e73c7e);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+    25% {
+		background-position: 50% 100%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+    75% {
+		background-position: 100% 0%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-section h2,.content-section h3{
+    font-size: 320px;
+    font-weight: 800;
+    line-height: 230px;
+    background: transparent;
+    color: transparent;
+    mix-blend-mode: multiply;
+    user-select: none;
+}
+.content-section h2 span{
+    font-family: "Amiri", serif!important;
+    font-size: 320px;
+    font-weight: 400;
+    line-height: 277px;
+    font-style: italic;
+    background: transparent;
+    color: transparent;
+    mix-blend-mode: multiply;
+    user-select: none;
+}
+.project-section{
+    padding-bottom: 50px;
+    background-color: var(--color2);
+}
+.project-img{
+    width: 100%;
+}
+.project-info{
+    padding: 15px 15px;
+}
+.project-info h5{
+    color: var(--color1);
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.project-info p{
+    color: var(--color5);
+    font-size: 21px;
+    font-weight: 400;
+}
+.project-img img{
+    width: 100%;
+}
+.marquee span {
+    font-size: 192px;
+    font-weight: 600;
+    color: var(--color4);
+    background-color: #000;
+    width: max-content;
+}
+.marquee {
+    position: relative;
+    overflow: hidden;
+    --offset: 20vw;
+    --move-initial: calc(-25% + var(--offset));
+    --move-final: calc(-50% + var(--offset));
+    background-color: #000;
+}
+
+.marquee__inner {
+    width: fit-content;
+    display: flex;
+    transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee 5s linear infinite;
+}
+
+.marquee span {
+    padding: 0 2vw;
+}
+
+.marquee:hover .marquee__inner {
+    animation-play-state: running;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(var(--move-initial), 0, 0);
+    }
+
+    100% {
+        transform: translate3d(var(--move-final), 0, 0);
+    }
+}
+.dark-section{
+    background-color: var(--color1);
+    padding: 100px 0;
+}
+.card-wraper{
+    background-color: var(--color1)!important;
+    padding: 50px 0;
+}
+.card-wraper h3{
+    font-size: 66px;
+    font-weight: 400;
+    color: var(--color2);
+}
+.card-wraper p{
+    font-size: 42px;
+    font-weight: 400;
+    color: var(--color2);
+}
+.pills-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.pill{
+    border-radius: 42px;
+    border: 4px solid #b5e742;
+    padding: 10px 40px;
+}
+.pill p{
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 34px;
+    text-transform: uppercase;
+    color: var(--color2);
+    margin-bottom: 0;
+}
+.testimonial-section{
+    padding: 50px 0;
+    position: relative;
+}
+.swiper-slide{
+    background-color: var(--color2);
+}
+.swiper-slide p{
+    font-size: 42px;
+    font-weight: 400;
+    color: var(--color1);
+    line-height: 54px;
+    margin-bottom: 0;
+}
+.test-data{
+    padding-top: 40px;
+}
+.swiper-slide p span{
+    font-size: 21px;
+    font-weight: 400;
+    color: var(--color1);
+    line-height: 27px;
+}
+.slider-btns{
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    display: flex;
+    width: fit-content;
+    gap: 25px;
+}
+.slider-btns button{
+    background: transparent;
+    border: none;
+}
+.slider-btns button svg{
+    height: 36px;
+    width: 110px;
+}
+
+#Line{
+    stroke:"#686868"!important;
+}
